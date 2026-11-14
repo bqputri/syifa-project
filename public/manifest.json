@@ -1,0 +1,21 @@
+{
+  "name": "CatatKas Aesthetic",
+  "short_name": "CatatKas",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#13111C",
+  "theme_color": "#FF9EE5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soft Coquette Pancake Recipe</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffeaf4, #f3e8ff);
+    padding:60px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.wrapper{
+    max-width:950px;
+    width:100%;
+    background:#fff;
+    border-radius:30px;
+    padding:50px;
+    box-shadow:0 25px 50px rgba(200,150,255,0.25);
+}
+
+/* TITLE */
+h1{
+    font-family:'Playfair Display', serif;
+    text-align:center;
+    font-size:3rem;
+    color:#c084fc;
+    margin-bottom:25px;
+}
+
+/* INFO TAGS */
+.info{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:35px;
+}
+
+.info span{
+    background:#fce7f3;
+    color:#a855f7;
+    padding:10px 20px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:500;
+    box-shadow:0 8px 15px rgba(200,150,255,0.2);
+}
+
+/* IMAGE */
+.recipe-img{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.recipe-img img{
+    width:100%;
+    max-width:700px;
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(180,150,255,0.3);
+}
+
+/* CONTENT GRID */
+.content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+/* CARD */
+.card{
+    background:#faf5ff;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 15px 30px rgba(200,150,255,0.15);
+}
+
+.card h3{
+    color:#d63384;
+    margin-bottom:15px;
+}
+
+li{
+    margin-bottom:12px;
+    font-size:14px;
+    color:#555;
+}
+
+/* TIPS */
+.tips{
+    margin-top:40px;
+    background:#fdf4ff;
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 10px 20px rgba(200,150,255,0.15);
+}
+
+.tips h3{
+    margin-bottom:10px;
+    color:#a855f7;
+}
+
+/* HOME BUTTON */
+.home-btn{
+    display:inline-block;
+    margin-bottom:25px;
+    text-decoration:none;
+    background:linear-gradient(135deg,#f9a8d4,#c084fc);
+    color:white;
+    padding:10px 22px;
+    border-radius:25px;
+    font-size:13px;
+    transition:0.3s;
+}
+
+.home-btn:hover{
+    transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .wrapper{
+        padding:30px;
+    }
+
+    .content{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<a href="index.html" class="home-btn">🏠 Back to Home</a>
+
+<h1>🍰 Pancake Recipe</h1>
+
+<div class="info">
+    <span>🍽 Serves: 2–3</span>
+    <span>⏱ 15 Minutes</span>
+    <span>💗 Sweet & Cozy</span>
+</div>
+
+<div class="content">
+
+<div class="card">
+<h3>🧁 Ingredients</h3>
+<ul>
+    <li>120g flour</li>
+    <li>2 eggs</li>
+    <li>50g sugar</li>
+    <li>Milk as needed</li>
+    <li>Baking powder</li>
+    <li>Favorite toppings</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>👩‍🍳 Instructions</h3>
+<ol>
+    <li>Mix flour, sugar & baking powder.</li>
+    <li>Whisk eggs & milk.</li>
+    <li>Combine until smooth.</li>
+    <li>Pour into heated pan.</li>
+    <li>Flip when bubbles appear.</li>
+    <li>Add toppings & serve ✨</li>
+</ol>
+</div>
+
+</div>
+
+<div class="tips">
+<h3>💡 Sweet Tips</h3>
+<ul>
+    <li>Add vanilla for extra aroma.</li>
+    <li>Cook on low heat for fluffy texture.</li>
+    <li>Top with strawberries & honey 🍯</li>
+</ul>
+</div>
+
+</div>
+
+</body>
+</html>

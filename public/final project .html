@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Week 8</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --pink-main: #F6C1CF;
+    --pink-soft: #FFDDE8;
+    --lavender: #D8C6F2;
+    --bg-gradient: linear-gradient(135deg, #FFF4F8, #F3EDFF);
+    --white: #ffffff;
+    --text-dark: #4A4458;
+    --soft-gray: #7A7488;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+/* HERO */
+.project-hero {
+    position: relative;
+    background: linear-gradient(
+        135deg,
+        #FFDDE8 0%,
+        #F6C1CF 40%,
+        #D8C6F2 75%,
+        #FFE7D6 100%
+    );
+    text-align: center;
+    padding: 140px 20px 100px;
+    color: white;
+    overflow: hidden;
+}
+
+/* Glow overlay */
+.project-hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 70%);
+    top: -150px;
+    right: -150px;
+    filter: blur(60px);
+}
+
+.project-hero::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,0.3), transparent 70%);
+    bottom: -150px;
+    left: -150px;
+    filter: blur(60px);
+}
+
+.project-hero h1 {
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.project-hero p {
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.95;
+    position: relative;
+    z-index: 2;
+}
+/* SECTION TITLE */
+.section-title {
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 40px;
+    color: var(--pink-main);
+    font-weight: 600;
+}
+
+/* PREVIEW BOX */
+.preview-box {
+    position: relative;
+    max-width: 550px;
+    margin: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 25px 60px rgba(214,180,255,0.25);
+}
+
+.preview-img {
+    width: 100%;
+    display: block;
+}
+
+/* Fade effect */
+.preview-box::before,
+.preview-box::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 80px;
+    pointer-events: none;
+}
+
+.preview-box::before {
+    top: 0;
+    background: linear-gradient(to bottom, #FFF4F8, transparent);
+}
+
+.preview-box::after {
+    bottom: 0;
+    background: linear-gradient(to top, #F3EDFF, transparent);
+}
+
+/* TOOLS */
+.tools-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tools-list span {
+    background: linear-gradient(135deg, var(--pink-soft), var(--lavender));
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    color: rgb(201, 139, 182);
+    box-shadow: 0 8px 20px rgba(214,180,255,0.25);
+    transition: 0.3s ease;
+}
+
+.tools-list span:hover {
+    transform: translateY(-3px);
+}
+
+/* DESCRIPTION */
+.project-description p {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    color: var(--soft-gray);
+}
+
+/* BACK BUTTON */
+.back-button {
+    text-align: center;
+    margin: 90px 0;
+}
+
+.back-button a {
+    background: linear-gradient(135deg, var(--pink-main), var(--lavender));
+    color: white;
+    padding: 14px 35px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 15px 35px rgba(214,180,255,0.35);
+    transition: 0.3s ease;
+}
+
+.back-button a:hover {
+    transform: translateY(-4px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        padding: 60px 18px;
+    }
+
+    .project-hero {
+        padding: 100px 15px 70px;
+    }
+
+    .preview-box {
+        max-width: 95%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="project-hero">
+    <h1>Project Week 8</h1>
+    <p>Membuat landing page sederhana menggunakan HTML & CSS dengan konsep clean, minimalis, dan aesthetic pink–lavender.</p>
+</section>
+
+<section class="project-preview container">
+    <h2 class="section-title">Project Preview</h2>
+    <div class="preview-box">
+        <img src="assets/foto/week8.png" alt="Project Screenshot" class="preview-img">
+    </div>
+</section>
+
+<section class="project-tools container">
+    <h2 class="section-title">Tools Used</h2>
+    <div class="tools-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Google Fonts</span>
+    </div>
+</section>
+
+<section class="project-description container">
+    <h2 class="section-title">About This Project</h2>
+    <p>
+        Pada project ini saya belajar membuat struktur layout menggunakan Flexbox,
+        menjaga konsistensi warna pink–lavender, serta menerapkan desain minimalis yang clean dan responsif.
+        Project ini membantu saya memahami pembuatan landing page modern dengan tampilan yang lembut dan profesional.
+    </p>
+</section>
+
+<div class="back-button">
+    <a href="index.html">← Back to Home</a>
+</div>
+
+</body>
+</html>

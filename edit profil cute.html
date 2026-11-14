@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Profile - Super Cute</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(120deg, #ffeef8, #e0f7fa);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .mobile-container {
+        width: 380px;
+        background-color: #fff0f8;
+        border-radius: 30px;
+        padding: 25px;
+        box-shadow: 0 15px 30px rgba(255,182,193,0.3);
+        position: relative;
+        text-align: center;
+        animation: floatCard 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatCard {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 2px dashed #ffb6c1;
+        padding-bottom: 10px;
+        position: relative;
+    }
+
+    .header h2 {
+        display: inline;
+        color: #ff69b4;
+        font-weight: 600;
+    }
+
+    .header i {
+        color: #ff69b4;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    /* Foto Profil */
+    .image-wrapper {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid #ffb6c1;
+        transition: transform 0.3s;
+    }
+
+    .profile-img:hover {
+        transform: scale(1.1) rotate(-5deg);
+    }
+
+    .edit-icon-badge {
+        margin-top: 5px;
+        color: #ff69b4;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .edit-icon-badge:hover {
+        color: #ff1493;
+    }
+
+    /* Form input oval */
+    .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .form-group label {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #ff69b4;
+        display: block;
+    }
+
+    .input-box {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border: 2px solid #ffc0cb;
+        border-radius: 30px;
+        padding: 10px 15px;
+        transition: all 0.3s;
+    }
+
+    .input-box:hover {
+        box-shadow: 0 4px 15px rgba(255,182,193,0.4);
+        transform: translateY(-2px);
+    }
+
+    .input-box i {
+        color: #ff69b4;
+        margin-right: 10px;
+        width: 20px;
+        text-align: center;
+    }
+
+    .input-box input {
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* Tombol lucu */
+    .btn-save {
+        width: 100%;
+        padding: 15px;
+        margin-top: 15px;
+        background: linear-gradient(90deg, #ffb6c1, #ff69b4);
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn-save:hover {
+        background: linear-gradient(90deg, #f755a6, #dd75ad);
+        box-shadow: 0 6px 15px rgba(197,102,150,0.5);
+        transform: translateY(-2px);
+    }
+
+    /* Sticker / hiasan */
+    .sticker {
+        position: absolute;
+        font-size: 25px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .sticker1 { top: -10px; left: -10px; }
+    .sticker2 { top: -10px; right: -10px; animation-delay: 1s; }
+    .sticker3 { bottom: -10px; left: 10px; animation-delay: 2s; }
+
+    @keyframes float {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+</style>
+</head>
+<body>
+
+<div class="mobile-container">
+    <div class="header">
+        <i class="fa-solid fa-chevron-left"></i>
+        <h2>Edit Profile</h2>
+    </div>
+
+    <div class="image-wrapper">
+        <img src="https://i.pinimg.com/originals/06/91/21/069121b1f24c7d6285e60e78e4c8c0fb.jpg" alt="Profile" class="profile-img">
+        <div class="edit-icon-badge">
+            <i class="fa-solid fa-camera"></i> Ubah Foto
+        </div>
+        <div class="sticker sticker1">💖</div>
+        <div class="sticker sticker2">🌸</div>
+        <div class="sticker sticker3">✨</div>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label>Full Name</label>
+            <div class="input-box">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" value="Syifaun Nadliroh">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Alamat</label>
+            <div class="input-box">
+                <i class="fa-solid fa-map-marker"></i>
+                <input type="text" value="Dusun Manggung Sari, Wonokerto, Turi, Sleman, Yogyakarta">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Tanggal Lahir</label>
+            <div class="input-box">
+                <i class="fa-solid fa-calendar"></i>
+                <input type="text" value="31 October 2008">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Hobi</label>
+            <div class="input-box">
+                <i class="fa-solid fa-heart"></i>
+                <input type="text" value="Membaca, Mendengarkan Musik, belajar coding">
+            </div>
+        </div>
+
+        <button type="button" class="btn-save">SIMPAN PROFILE</button>
+    </form>
+</div>
+
+</body>
+</html>

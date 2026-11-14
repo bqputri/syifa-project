@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Week 8</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --pink-main: #F6C1CF;
+            --pink-light: #FFF4F8;
+            --white: #ffffff;
+            --text-dark: #3F3A45;
+            --soft-gray: #6B6575;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--pink-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        /* HERO */
+        .project-hero {
+            background: var(--white);
+            text-align: center;
+            padding: 120px 20px 80px;
+        }
+
+        .project-hero h1 {
+            font-size: 2.8rem;
+            color: var(--pink-main);
+            font-weight: 600;
+        }
+
+        .project-hero p {
+            margin-top: 20px;
+            color: var(--soft-gray);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--pink-main);
+            font-weight: 500;
+        }
+
+        /* IMAGE */
+        .project-image img {
+            width: 100%;
+            max-width: 900px;
+            display: block;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        /* TOOLS */
+        .tools-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tools-list span {
+            background: var(--white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+     .preview-box {
+      position: relative;
+}
+
+.preview-box::before,
+.preview-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 40px;
+  pointer-events: none;
+}
+
+.preview-box::before {
+  top: 0;
+  background: linear-gradient(to bottom, white, transparent);
+}
+
+.preview-box::after {
+  bottom: 0;
+  background: linear-gradient(to top, white, transparent);
+}
+
+
+
+
+        /* BACK BUTTON */
+        .back-button {
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .back-button a {
+            background: var(--pink-main);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 8px 20px rgba(246,193,207,0.3);
+            transition: 0.3s ease;
+        }
+
+        .back-button a:hover {
+            transform: translateY(-3px);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="project-hero">
+        <h1>Project Week 8</h1>
+        <p>Membuat landing page sederhana menggunakan HTML & CSS dengan konsep clean dan minimalis.</p>
+    </section>
+
+    
+    <section class="project-preview container">
+    <h2 class="section-title">Project Preview</h2>
+    
+    <div class="preview-box">
+        <img src="week8.png" style="width:300px; border:2px solid red;">
+
+    </div>
+</section>
+
+    <!-- TOOLS -->
+    <section class="project-tools container">
+        <h2 class="section-title">Tools Used</h2>
+        <div class="tools-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Google Fonts</span>
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-description container">
+        <h2 class="section-title">About This Project</h2>
+        <p>
+            Pada project ini saya belajar membuat struktur layout menggunakan Flexbox,
+            mengatur warna agar konsisten, serta menerapkan desain minimalis yang clean dan rapi.
+            Project ini membantu saya memahami dasar pembuatan landing page dan pengaturan tampilan yang responsif.
+        </p>
+    </section>
+
+    <!-- BACK BUTTON -->
+    <div class="back-button">
+        <a href="portfolio.html">← Back to Home</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#13111C">
+    
+    <!-- PWA Requirements -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/icon-192x192.png">
+
+    <title>Latihan PWA Modal Estetik</title>
+    
+    <!-- Tailwind CSS & Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(reg => {
+                    console.log('Service Worker Registered!', reg);
+                }).catch(err => {
+                    console.log('Service Worker Registration Failed:', err);
+                });
+            });
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-dark: #13111C;
+            --primary: #C29EFF;
+            --accent: #FF9EE5;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(194, 158, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 158, 229, 0.1) 0%, transparent 40%);
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background-size: 200% auto;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(194, 158, 255, 0.3);
+        }
+
+        .btn-gradient:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(194, 158, 255, 0.5);
+        }
+
+        /* Modal Animations */
+        #my-modal {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        #my-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #modal-content {
+            transform: scale(0.9) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        #my-modal.active #modal-content {
+            transform: scale(1) translateY(0);
+        }
+
+        /* Input Styling */
+        .glass-input {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--glass-border);
+            color: white;
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .glass-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 15px rgba(194, 158, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased flex items-center justify-center p-6">
+
+    <!-- Main Content -->
+    <div class="glass-card p-10 max-w-md w-full text-center relative overflow-hidden">
+        <!-- Decorative blob -->
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-[var(--primary)] rounded-full blur-[50px] opacity-20 pointer-events-none"></div>
+        
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#C29EFF] to-[#FF9EE5] flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <i class="fas fa-mobile-alt text-2xl text-white"></i>
+        </div>
+        
+        <h1 class="text-3xl font-extrabold mb-2 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#C29EFF] to-[#FF9EE5]">
+            PWA + Modal
+        </h1>
+        <p class="text-sm text-slate-400 mb-8 font-medium">Contoh penerapan aplikasi Progressive Web App dengan desain modal yang modern dan estetik.</p>
+        
+        <button onclick="openModal()" class="w-full py-4 rounded-2xl btn-gradient font-bold uppercase tracking-widest text-sm">
+            <i class="fas fa-bolt mr-2"></i> Buka Modal
+        </button>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="my-modal" class="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/60 backdrop-blur-sm">
+        
+        <!-- Modal Content Container -->
+        <div id="modal-content" class="glass-card p-8 w-full max-w-sm relative">
+            
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white transition-colors bg-white/5 w-8 h-8 rounded-full flex items-center justify-center">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-1 text-white">Input Data Baru</h3>
+                <p class="text-xs text-slate-400">Silakan masukkan detail informasi di bawah ini.</p>
+            </div>
+
+            <!-- Modal Body (Form) -->
+            <div class="space-y-4 mb-8">
+                <div>
+                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 pl-1">Nama Lengkap</label>
+                    <input type="text" placeholder="Ketik nama di sini..." class="w-full px-4 py-3 glass-input text-sm">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 pl-1">Email</label>
+                    <input type="email" placeholder="contoh@email.com" class="w-full px-4 py-3 glass-input text-sm">
+                </div>
+            </div>
+
+            <!-- Modal Footer (Actions) -->
+            <div class="flex gap-3">
+                <button onclick="closeModal()" class="flex-1 py-3 rounded-xl border border-white/10 hover:bg-white/5 text-slate-300 font-bold text-xs uppercase tracking-widest transition-all">
+                    Batal
+                </button>
+                <button onclick="submitModal()" class="flex-1 py-3 rounded-xl btn-gradient font-bold text-xs uppercase tracking-widest">
+                    Simpan
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification (Hidden by default) -->
+    <div id="toast" class="fixed bottom-10 left-1/2 transform -translate-x-1/2 glass-card px-6 py-3 opacity-0 pointer-events-none transition-all duration-300 translate-y-4">
+        <div class="flex items-center gap-3">
+            <i class="fas fa-check-circle text-[var(--primary)]"></i>
+            <span class="text-sm font-semibold text-white">Data berhasil disimpan!</span>
+        </div>
+    </div>
+
+    <!-- Scripts for Modal logic -->
+    <script>
+        const modal = document.getElementById('my-modal');
+        const toast = document.getElementById('toast');
+
+        function openModal() {
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        function submitModal() {
+            closeModal();
+            // Show toast animation
+            setTimeout(() => {
+                toast.classList.remove('opacity-0', 'translate-y-4');
+                toast.classList.add('opacity-100', 'translate-y-0');
+                
+                // Hide toast after 3 seconds
+                setTimeout(() => {
+                    toast.classList.add('opacity-0', 'translate-y-4');
+                    toast.classList.remove('opacity-100', 'translate-y-0');
+                }, 3000);
+            }, 300); // Wait for modal to start closing before showing toast
+        }
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

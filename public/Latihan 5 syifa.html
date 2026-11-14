@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Pendaftaran Siswa</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #fddde6, #f8c8dc);
+    margin: 0;
+    padding: 40px 15px;
+}
+
+/* Judul */
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #c2185b;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+/* Form utama */
+form {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.2);
+}
+
+/* Fieldset */
+fieldset {
+    border: 2px solid #f8bbd0;
+    border-radius: 20px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+legend {
+    font-family: 'Playfair Display', serif;
+    color: #ad1457;
+    padding: 0 10px;
+}
+
+label {
+    font-weight: 500;
+    color: #880e4f;
+}
+
+/* Input */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #f8bbd0;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #ec407a;
+    box-shadow: 0 0 8px rgba(236, 64, 122, 0.3);
+}
+
+/* Radio & checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* Tombol */
+button {
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(135deg, #f48fb1, #ec407a);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 8px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(236, 64, 122, 0.3);
+}
+
+/* Tombol Home (tidak fixed biar gak nutupin) */
+.back-home {
+    display: inline-block;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #f8bbd0, #f48fb1);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* ================= RESPONSIVE HP ================= */
+@media (max-width: 600px){
+
+    h1{
+        font-size: 1.6rem;
+    }
+
+    form{
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    fieldset{
+        padding: 15px;
+    }
+
+    input, select, textarea{
+        font-size: 14px;
+    }
+
+    button{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="back-home">🏠 Home</a>
+
+<h1>🎀 Form Pendaftaran Siswa 🎀</h1>
+
+<form action="LATIHAN 1 SYIFA HTML CSS 2.html"></form>
+
+<fieldset>
+<legend>Data Diri</legend>
+
+<label>Nama Lengkap:</label>
+<input type="text" required>
+
+<label>Email:</label>
+<input type="email" required>
+
+<label>Nomor Telepon:</label>
+<input type="text"
+oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+
+<label>Tanggal Lahir:</label>
+<input type="date">
+</fieldset>
+
+<fieldset>
+<legend>Detail Pertanyaan</legend>
+
+<label>Kategori:</label>
+<select required>
+<option value="">-- Pilih Kategori --</option>
+<option>Pertanyaan Umum</option>
+<option>Bantuan Teknis</option>
+<option>Billing</option>
+<option>Feedback</option>
+</select>
+
+<label>Jenis Kelamin:</label><br>
+<input type="radio" name="gender"> Pria
+<input type="radio" name="gender"> Wanita
+
+<br><br>
+
+<label>Kota:</label>
+<select>
+<option>Jakarta</option>
+<option>Bandung</option>
+<option>Surabaya</option>
+<option>Yogyakarta</option>
+</select>
+
+<label>Hobi:</label><br>
+<input type="checkbox"> Coding
+<input type="checkbox"> Gaming
+<input type="checkbox"> Desain
+<input type="checkbox"> Musik
+
+<br><br>
+
+<label>Bio Singkat:</label>
+<textarea rows="4"></textarea>
+
+</fieldset>
+
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+
+</form>
+
+</body>
+</html>

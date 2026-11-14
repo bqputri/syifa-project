@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - Basic CSS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 1. Reset Dasar */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Latar abu-abu terang standar */
+            padding: 20px;
+        }
+
+        /* 2. Container Utama (Kotak Putih di Tengah) */
+        .mobile-container {
+            background-color: white;
+            width: 400px; /* Lebar tetap */
+            margin: 0 auto; /* Trik dasar untuk menengahkan div secara horizontal */
+            padding: 20px;
+            border: 1px solid #ccc; /* Garis pinggir tipis */
+        }
+
+        /* 3. Header */
+        .header {
+            text-align: center; /* Teks rata tengah */
+            margin-bottom: 20px;
+            border-bottom: 2px solid #FFD700; /* Garis bawah kuning */
+            padding-bottom: 10px;
+        }
+
+        .header h2 {
+            display: inline; /* Agar sejajar dengan ikon jika perlu */
+            color: #333;
+        }
+
+        /* 4. Foto Profil */
+        .image-wrapper {
+            text-align: center; /* Menengahkan gambar */
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Membuat lingkaran */
+            border: 5px solid #FFD700;
+        }
+
+        /* Ikon kamera kita taruh di bawah gambar saja (tanpa position absolute) */
+        .edit-icon-badge {
+            text-align: center;
+            margin-top: 5px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* 5. Styling Form (Logika Blok Standar) */
+        .form-group {
+            margin-bottom: 15px; /* Jarak antar kolom */
+        }
+
+        /* Label ditaruh di atas input */
+        .form-group label {
+            display: block; /* Memaksa label pindah ke baris baru */
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        /* Membungkus input dan ikon agar terlihat menyatu (Simple Border) */
+        .input-box {
+            border: 1px solid #999;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        /* Ikon di samping teks */
+        .input-box i {
+            color: #FFD700;
+            margin-right: 10px;
+            width: 20px; /* Lebar tetap agar rapi */
+        }
+
+        /* Kolom ketik */
+        .input-box input {
+            border: none; /* Hilangkan border bawaan input */
+            width: 80%; /* Lebar menyesuaikan sisa ruang */
+            font-size: 14px;
+            outline: none; /* Hilangkan garis biru saat diklik */
+        }
+
+        /* 6. Tombol */
+        .btn-save {
+            width: 100%;
+            padding: 15px;
+            background-color: #FFD700;
+            border: none; /* Tanpa garis pinggir */
+            color: black;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* Efek hover sederhana */
+        .btn-save:hover {
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="mobile-container">
+        <div class="header">
+            <i class="fa-solid fa-chevron-left"></i>
+            <h2>Edit Profile</h2>
+        </div>
+
+        <div class="image-wrapper">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg" alt="Profile" class="profile-img">
+            <div class="edit-icon-badge">
+                <i class="fa-solid fa-camera"></i> Ubah Foto
+            </div>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label>Full Name</label>
+                <div class="input-box">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" value="Bambang">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Alamat</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-map-marker"></i>
+                    <input type="text" value="Yogyakarta, Indonesia">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Tanggal Lahir</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-calendar"></i>
+                    <input type="text" value="31 October 2002">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Hobi</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-heart"></i>
+                    <input type="text" value="Coding, Gaming">
+                </div>
+            </div>
+
+            <button type="button" class="btn-save">SIMPAN PROFILE</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

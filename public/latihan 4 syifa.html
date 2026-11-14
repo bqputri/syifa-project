@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Jadwal Coquette Syifa</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #f8c8dc);
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+/* ===== JUDUL ===== */
+h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 3.5rem;
+    color: #f76b99;
+    text-shadow: 0 5px 15px rgba(255, 145, 200, 0.3);
+}
+
+p {
+    color: #a64d79;
+    font-weight: 500;
+}
+
+/* ===== WRAPPER ===== */
+.table-wrapper{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+/* ===== BUBBLE TABLE ===== */
+.bubble-table{
+    width:100%;
+    max-width:950px;
+    border-collapse:separate;
+    border-spacing:12px;
+}
+
+/* Header */
+.bubble-table th{
+    background: linear-gradient(135deg,#ff99cc,#ff66a3);
+    color:white;
+    border-radius:25px;
+    padding:12px;
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+/* Bubble cell */
+.bubble-table td{
+    background:#ffffffcc;
+    backdrop-filter:blur(10px);
+    border-radius:22px;
+    padding:12px 10px;
+    border:none;
+    box-shadow:0 8px 18px rgba(255,105,180,0.15);
+    transition:0.25s ease;
+    color:#5c3a4d;
+}
+
+/* Jam kiri */
+.bubble-table td:first-child{
+    background:transparent;
+    font-weight:bold;
+    color:#ff4d88;
+    box-shadow:none;
+}
+
+/* Hover */
+.bubble-table td:hover{
+    transform:translateY(-3px) scale(1.03);
+    background:#fff0f8;
+}
+
+/* Istirahat */
+.bubble-table td[colspan="5"]{
+    background:linear-gradient(135deg,#ffe6f2,#ffd6ec);
+    font-weight:600;
+    text-align:center;
+}
+
+/* ===== TOMBOL ===== */
+hr {
+    border: none;
+    height: 2px;
+    width: 60%;
+    margin: 50px auto;
+    background: linear-gradient(to right, transparent, #ff66a3, transparent);
+}
+
+a {
+    text-decoration: none;
+    background: linear-gradient(135deg, #ff99cc, #ff66a3);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(255,105,180,0.4);
+    transition: 0.3s ease;
+}
+
+a:hover {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 15px 35px rgba(255,105,180,0.5);
+}
+
+.back-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    background: linear-gradient(135deg, #f8bbd0, #f48fb1);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(236, 64, 122, 0.3);
+    transition: 0.3s ease;
+}
+
+.back-home:hover {
+    transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE HP ================= */
+@media (max-width:600px){
+
+body{
+    padding: 15px 8px;
+}
+
+/* Judul lebih kecil biar muat */
+h1{
+    font-size: 1.9rem;
+}
+
+p{
+    font-size: 13px;
+}
+
+/* TABLE FULL HP TANPA SCROLL */
+.bubble-table{
+    width: 100%;
+    min-width: unset; /* penting biar ga melebar */
+    border-spacing: 6px;
+}
+
+/* Header */
+.bubble-table th{
+    font-size: 10px;
+    padding: 8px 6px;
+    border-radius: 15px;
+}
+
+/* Isi tabel */
+.bubble-table td{
+    font-size: 10px;
+    padding: 8px 6px;
+    border-radius: 16px;
+}
+
+/* Jam kiri lebih kecil */
+.bubble-table td:first-child{
+    font-size: 10px;
+}
+
+/* Hilangkan efek hover di HP */
+.bubble-table td:hover{
+    transform: none;
+}
+
+/* Tombol home */
+.back-home{
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    font-size: 11px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="back-home">🏠 Home</a>
+
+<h1>Jadwal Pelajaran 🎀</h1>
+<p>Semester Gasal 2025/2026</p>
+
+<div class="table-wrapper">
+<table class="bubble-table">
+
+<thead>
+<tr>
+<th>Jam</th>
+<th>Senin</th>
+<th>Selasa</th>
+<th>Rabu</th>
+<th>Kamis</th>
+<th>Jum'at</th>
+<th>💗</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>07.00-08.30</td>
+<td>KKTB</td>
+<td>KKTB</td>
+<td>KKTB</td>
+<td>Al Qur'an Hadis</td>
+<td>Fiqih</td>
+<td>📚</td>
+</tr>
+
+<tr>
+<td>08.30-09.30</td>
+<td>Matematika</td>
+<td>Sejarah</td>
+<td>Tarikh</td>
+<td>Tarikh</td>
+<td>Kemuh</td>
+<td>✏️</td>
+</tr>
+
+<tr>
+<td>09.30-09.50</td>
+<td colspan="5">Istirahat & Sholat Dhuha 🤍</td>
+<td>☕</td>
+</tr>
+
+<tr>
+<td>10.30-11.10</td>
+<td>PPKN</td>
+<td>B. Jawa</td>
+<td>MUB</td>
+<td>KKTB</td>
+<td>B. Indonesia</td>
+<td>📖</td>
+</tr>
+
+<tr>
+<td>11.25-12.00</td>
+<td colspan="5">Istirahat & Sholat Dhuhur 🌸</td>
+<td>🕌</td>
+</tr>
+
+<tr>
+<td>12.00-13.15</td>
+<td>MUB</td>
+<td>KIK</td>
+<td>B. Arab</td>
+<td>Ekstra</td>
+<td>Ekstra</td>
+<td>📝</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<hr>
+
+<h3>✨ Cek Profil Saya ✨</h3>
+<a href="LATIHAN 1 SYIFA HTML CSS2.HTML">BIODATA</a>
+
+</body>
+</html>

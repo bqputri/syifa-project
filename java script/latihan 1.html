@@ -1,0 +1,38 @@
+<html>
+<body>
+
+<h2>Apa aja hobiku?</h2>
+<p id="demo1">membaca buku.</p>
+
+<button onclick="document.getElementById('demo1').innerHTML='mengaji'">
+Click Me!
+</button>
+
+
+<h2>JavaScript bisa mengubah gaya elemen HTML.</h2>
+
+<p id="demo2">
+Hobiku membaca buku dan mengaji karena aku suka menambah ilmu sekaligus belajar menjadi pribadi yang lebih baik.
+</p>
+
+<button onclick="
+document.getElementById('demo2').style.color='brown';
+document.getElementById('demo2').style.fontSize='20px';">Ubah Warna & Ukuran</button>
+
+<button onclick="document.getElementById('demo2').style.fontSize='35px'">
+klik ini
+</button>
+
+
+<p><h3>Mengubah reaksi nailong.</h3></p>
+
+<button onclick="document.getElementById('myImage').src='foto/nailong1.jpg'">
+semula
+</button>
+
+<img id="myImage" src="foto/nailong1.jpg" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='foto/nailong2.jpg'">berubah</button>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Coquette Navbar & Footer 🎀</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #ffe6f2, #f3d9ff, #e0c3fc);
+}
+
+/* ✨ NAVBAR DREAMY GLASS */
+.navbar {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #c2185b;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #6a1b9a;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: 0.4s ease;
+}
+
+.nav-menu a:hover {
+    background: rgba(255,255,255,0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(200, 120, 255, 0.3);
+}
+
+/* 💗 MAIN GLASS CARD */
+main {
+    flex: 1;
+    margin: 60px auto;
+    width: 85%;
+    padding: 60px;
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(200, 120, 255, 0.3);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #c2185b;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+p {
+    color: #6a1b9a;
+    margin-bottom: 10px;
+}
+
+/* 🎀 BACK BUTTON DREAMY */
+.back-home {
+    display: inline-block;
+    margin-bottom: 30px;
+    text-decoration: none;
+    background: linear-gradient(135deg, #f8bbd0, #d8b4fe);
+    color: white;
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-size: 14px;
+    box-shadow: 0 8px 20px rgba(200, 120, 255, 0.3);
+    transition: 0.4s ease;
+}
+
+.back-home:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(200, 120, 255, 0.5);
+}
+
+/* 💜 FOOTER DREAMY */
+.footer {
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #6a1b9a;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #6a1b9a;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.5);
+    transition: 0.4s ease;
+}
+
+.social-links a:hover {
+    background: #f8bbd0;
+    color: white;
+    transform: scale(1.1);
+}
+
+.back-home {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    text-decoration: none;
+    background: linear-gradient(135deg, #f8bbd0, #d8b4fe);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    box-shadow: 0 8px 20px rgba(200, 120, 255, 0.3);
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+.back-home:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(200, 120, 255, 0.5);
+}
+
+main {
+    padding-bottom: 100px;
+}
+/* ================= RESPONSIVE HP ================= */
+@media (max-width: 600px){
+
+/* NAVBAR */
+.navbar{
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+}
+
+.nav-menu{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.nav-menu a{
+    font-size: 14px;
+    padding: 6px 14px;
+}
+
+/* MAIN */
+main{
+    width: 92%;
+    margin: 40px auto;
+    padding: 30px 20px;
+    border-radius: 22px;
+}
+
+h1{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    font-size: 14px;
+}
+
+/* FOOTER */
+.footer{
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links{
+    justify-content: center;
+}
+
+/* BACK BUTTON */
+.back-home{
+    bottom: 15px;
+    left: 15px;
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+}
+
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">🎀 Syifa Web</div>
+    <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<a href="index.html" class="back-home">🏠 Back to Home</a>
+
+
+    <h1>Welcome to My Coquette Website ✨</h1>
+    <p>Soft pink aesthetic with elegant touches and girly vibes.</p>
+    <p>Built using Flexbox layout with responsive design.</p>
+</main>
+
+<footer class="footer">
+    <div class="copyright">
+        © 2026 Syifa Web. All rights reserved.
+    </div>
+    <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">TikTok</a>
+    </div>
+</footer>
+
+</body>
+</html>
